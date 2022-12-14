@@ -1,0 +1,36 @@
+<div class="h-20 w-full bg-black flex flex-row items-center">
+    <div class="pl-5 min-w-fit md:pl-10">
+        <img class="w-10" src="../../../assets/images/star-logo.png" alt="game-store-logo">
+    </div>
+    <div class="pl-2 pr-14 md:pl-4 md:pr-28">
+        <h1 class="text-white whitespace-nowrap font-semibold text-xl md:text-2xl">Game Store</h1>
+    </div>
+    <div class="hidden justify-between gap-3 md:gap-10 md:text-lg lg:flex">
+        <button 
+        *ngFor="let navItem of navItems"
+        [routerLink]="navItem.link"
+        class="text-white hover:text-slate-600"
+        >
+            {{navItem.title}}
+        </button>
+    </div>
+    <div class="ml-auto mr-4 flex flex-row items-center justify-between gap-8 md:text-xl">
+        <div class="flex gap-2 items-center">
+            <button>
+                <img class="w-8" src="../../../assets/images/user.png" alt="user-avatar">
+            </button>
+            <h2 class="text-white font-light ml-1">Jason Borman</h2>
+        </div>
+        <div class="gap-2 items-center hidden lg:flex">
+            <button>
+                <img class="w-6" src="../../../assets/images/shopping-cart.png" alt="shopping-cart">
+            </button>
+            <h2 class="text-white ml-1">3</h2>
+        </div>
+        <div class="hidden lg:flex">
+            <button>
+                <img class="w-6" src="../../../assets/images/logout.png" alt="logout">
+            </button>
+        </div>
+    </div>
+</div>
